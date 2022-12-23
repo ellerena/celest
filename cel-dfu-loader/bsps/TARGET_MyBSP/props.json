@@ -1,0 +1,45 @@
+{
+    "core": {
+        "id": "bf8c8a05-49cb-532c-b2ef-8bba17c1f27d",
+        "name": "TARGET_CY8CKIT-040T",
+        "version": "0.5.0.28221"
+    },
+    "opt": {
+        "props": {
+            "capabilities": [
+                "bsp_gen4",
+                "cat2",
+                "capsense",
+                "cy8ckit_040t",
+                "enclosure",
+                "flash_64k",
+                "i2c",
+                "led",
+                "low_power",
+                "lptimer",
+                "mcu_gp",
+                "msc_button",
+                "msc_proximity",
+                "msc_touchpad",
+                "msclp",
+                "psoc4",
+                "serial_led",
+                "spi",
+                "sram_8k"
+            ],
+            "category": "PSoC\u2122 4 BSPs",
+            "dependencies": {
+                "core-lib": "latest-v1.X",
+                "core-make": "release-v3.0.0-Beta1",
+                "mtb-pdl-cat2": "release-v2.0.0-Beta1",
+                "recipe-make-cat2": "release-v2.0.0-Beta1"
+            },
+            "docs_dir": "docs",
+            "flow_version": "2.0",
+            "ignore_dirs": [
+                "COMPONENT_BSP_DESIGN_MODUS/GeneratedSource"
+            ],
+            "min_tools": "3.0.0"
+        }
+    }
+}
