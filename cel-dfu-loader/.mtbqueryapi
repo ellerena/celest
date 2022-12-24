@@ -1,4 +1,5 @@
 MTBQUERYAPI_CACHE_PATH_NAME=/Users/ellerena/projects/git/infineon/celeste/cel-dfu-loader/.mtbqueryapi
+MTBQUERYAPI_CACHE_PATH_NAME=/Users/ellerena/projects/git/infineon/celeste/cel-dfu-loader/.mtbqueryapi
 MTB_ADDITIONAL_DEVICES=
 MTB_APP_NAME=cel-dfu-loader
 MTB_BSP_TOOL_TYPES=capsense-configurator capsense-tuner smartio-configurator device-configurator seglcd-configurator

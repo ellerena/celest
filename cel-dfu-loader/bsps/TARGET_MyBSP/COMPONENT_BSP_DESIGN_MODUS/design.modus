@@ -33,12 +33,11 @@
                 <Block location="ioss[0].port[0].pin[2]">
                     <Alias value="CYBSP_CSD_TP_COL2"/>
                     <Alias value="CYBSP_CSX_TP_RX2"/>
-                    <Alias value="CYBSP_USER_BTN"/>
                     <Personality template="m0s8pin" version="2.0">
-                        <Param id="DriveModes" value="CY_GPIO_DM_PULLUP"/>
+                        <Param id="DriveModes" value="CY_GPIO_DM_ANALOG"/>
                         <Param id="initialState" value="1"/>
                         <Param id="vtrip" value="CY_GPIO_VTRIP_CMOS"/>
-                        <Param id="isrTrigger" value="CY_GPIO_INTR_FALLING"/>
+                        <Param id="isrTrigger" value="CY_GPIO_INTR_DISABLE"/>
                         <Param id="slewRate" value="CY_GPIO_SLEW_FAST"/>
                         <Param id="inFlash" value="true"/>
                         <Param id="portLevelConfig" value="false"/>
