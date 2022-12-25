@@ -225,9 +225,16 @@ static void SlaveCallback(uint32_t event)
                     /* Execute command */
                     /* Switch to BOOTLOADER if received command is SWITCH_TO_APP_CMD (0xEA)*/
                 	if(i2cWriteBuffer[PACKET_CMD_POS] == SWITCH_TO_APP_CMD)
+                	{
                 		is_user_I2C_event_detected = true;
-
-                    i2cReadBuffer[PACKET_STS_POS] = STS_CMD_DONE;
+                		i2cReadBuffer[PACKET_STS_POS] = STS_CMD_DONE;
+                	}
+                	else
+                	{
+                		/* for debugging purposes, is command is any other than SWITCH_TO_APP_CMD
+                		 * do nothing, only return the value: command + 1 */
+                		i2cReadBuffer[PACKET_STS_POS] = i2cWriteBuffer[PACKET_CMD_POS] + 1;
+                	}
                 }
             }
         }

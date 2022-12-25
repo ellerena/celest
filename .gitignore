@@ -31,6 +31,9 @@ Debug/
 Release/
 *_build/
 
+# MT 3.0 mtbquery file, ignore
+.mtbqueryapi
+
 # Visual Studio Code
 openocd.tcl
 .vscode/
