@@ -221,6 +221,8 @@ int main(void)
     /* Start the first scan */
     Cy_CapSense_ScanAllSlots(&cy_capsense_context);
 
+    Cy_GPIO_Set(CYBSP_INT_PORT, CYBSP_INT_PIN);
+
     for (;;)
     {
         if (CY_CAPSENSE_NOT_BUSY == Cy_CapSense_IsBusy(&cy_capsense_context))
@@ -232,6 +234,18 @@ int main(void)
             /* Establishes synchronized communication with the CAPSENSE Tuner tool */
             Cy_CapSense_RunTuner(&cy_capsense_context);
             #endif
+
+            if(0 == (0xff & cy_capsense_tuner.commonContext.configId))
+            {
+            	Cy_GPIO_Clr(CYBSP_INT_PORT, CYBSP_INT_PIN);
+            	cy_capsense_tuner.commonContext.configId = 0x95fa;
+            }
+
+            if(1 == (0xff & cy_capsense_tuner.commonContext.configId))
+            {
+            	Cy_GPIO_Set(CYBSP_INT_PORT, CYBSP_INT_PIN);
+            	cy_capsense_tuner.commonContext.configId = 0x95fa;
+            }
 
             /* Start the next scan */
             Cy_CapSense_ScanAllSlots(&cy_capsense_context);

@@ -219,10 +219,9 @@
                     </Personality>
                 </Block>
                 <Block location="ioss[0].port[4].pin[0]">
-                    <Alias value="CYBSP_SERIAL_LED"/>
-                    <Alias value="CYBSP_SPI_MOSI"/>
+                    <Alias value="CYBSP_INT"/>
                     <Personality template="m0s8pin" version="2.0">
-                        <Param id="DriveModes" value="CY_GPIO_DM_ANALOG"/>
+                        <Param id="DriveModes" value="CY_GPIO_DM_OD_DRIVESLOW"/>
                         <Param id="initialState" value="1"/>
                         <Param id="vtrip" value="CY_GPIO_VTRIP_CMOS"/>
                         <Param id="isrTrigger" value="CY_GPIO_INTR_DISABLE"/>
@@ -318,7 +317,7 @@
                     <Personality template="m0s8mxscb3ezi2c" version="1.0">
                         <Param id="DataRate" value="400"/>
                         <Param id="NumOfAddr" value="CY_SCB_EZI2C_ONE_ADDRESS"/>
-                        <Param id="SlaveAddress1" value="12"/>
+                        <Param id="SlaveAddress1" value="9"/>
                         <Param id="SlaveAddress2" value="9"/>
                         <Param id="SubAddrSize" value="CY_SCB_EZI2C_SUB_ADDR16_BITS"/>
                         <Param id="EnableWakeup" value="false"/>
